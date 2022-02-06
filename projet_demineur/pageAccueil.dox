@@ -1,0 +1,35 @@
+/*! \mainpage %Mes TP d'algorithmique et programmation
+
+  \section a-propos A propos
+ 
+  Ce dépôt répertorie et documente une partie des programmes que j'ai réalisés 
+  dans le cadre de mon apprentissage de l'algorithmique et de la programmation à l'IUT de Bayonne.
+
+  Ces programmes ont été écrits dans un but pédagogique afin de développer mes compétences 
+  en algorithmique et en programmation durant le semestre 1 de BUT informatique. 
+
+Les solutions de ces exercices ont été majoritairement conçues durant les séances de travaux dirigés (TD)
+et programmées durant les séances de travaux pratiques (TP).
+ 
+
+  \section organisation-depot Organisation du dépôt
+
+Ce dépôt est organisé de la façon suivante :
+
+- le dossier \b docs contient la documentation relative aux différents programmes élaborés. 
+Cette documentation a été générée avec <a href="https://www.doxygen.nl/index.html">Doxygen</a> 
+et peut être consultée sur la page web de ce dépôt :
+(TODO : insérer le lien vers la page contenant la documentation).
+
+ - le dossier \b doxygen-config contient les paramètres retenus pour générer la documentation 
+ via Doxygen.  
+
+Les autres dossiers du dépôt (tp1, tp2...) correspondent aux TP réalisés dans le cadre des
+enseignements portant sur l'initiation au développement (ressource R1.01 du programme national 
+du BUT informatique). 
+
+Chacun de ces TP contient autant de sous-dossiers que d'exercices traités durant ce TP 
+et chaque dossier d'exercice contient le code source que j'ai écris pour traiter l'exercice. 
+
+
+ */

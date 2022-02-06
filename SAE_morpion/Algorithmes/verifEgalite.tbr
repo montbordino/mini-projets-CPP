@@ -1,0 +1,90 @@
+<?xml version="1.1"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>verifEgalite</nom>
+  <date_creation>5/1/2022 10:45</date_creation>
+  <Elements>
+    <Action>
+      <Position>721;104</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>tab</PreAssertion>
+      <PostAssertion>egalite</PostAssertion>
+      <Titre>verifEgalite</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>671;202</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>tab&#xd;
+taille&#xd;
+egalite</PreAssertion>
+          <PostAssertion>egalite</PostAssertion>
+          <Titre>verifier si le tableau tab est remplis</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Iteration>
+              <Position>848.5;282.5</Position>
+              <StyleLien>1</StyleLien>
+              <Titre>pour ligne de 0 à taille</Titre>
+              <IterationFixe>1</IterationFixe>
+              <Enfants>
+                <Iteration>
+                  <Position>848.5;366.5</Position>
+                  <StyleLien>1</StyleLien>
+                  <Titre>pour colonne de 0 à taille</Titre>
+                  <IterationFixe>1</IterationFixe>
+                  <Enfants>
+                    <Condition>
+                      <Position>774.5;445</Position>
+                      <StyleLien>0</StyleLien>
+                      <estUnique>0</estUnique>
+                      <operationsLogiques>
+                        <operation>
+                          <Titre>tab[ligne][colonne] = ' '</Titre>
+                          <Enfants>
+                            <Action>
+                              <Position>805;520</Position>
+                              <StyleLien>1</StyleLien>
+                              <PreAssertion>?</PreAssertion>
+                              <PostAssertion>?</PostAssertion>
+                              <Titre>egalite ← faux</Titre>
+                              <DetailsVisible>0</DetailsVisible>
+                              <DetailsVideVisible>1</DetailsVideVisible>
+                              <Enfants/>
+                            </Action>
+                          </Enfants>
+                        </operation>
+                      </operationsLogiques>
+                    </Condition>
+                  </Enfants>
+                </Iteration>
+              </Enfants>
+            </Iteration>
+          </Enfants>
+        </Action>
+        <Action>
+          <Position>514;199</Position>
+          <StyleLien>1</StyleLien>
+          <PreAssertion>?</PreAssertion>
+          <PostAssertion>?</PostAssertion>
+          <Titre>egalite ← vrai</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
+          <Enfants/>
+        </Action>
+        <Action>
+          <Position>1111;199</Position>
+          <StyleLien>1</StyleLien>
+          <PreAssertion>?</PreAssertion>
+          <PostAssertion>?</PostAssertion>
+          <Titre>retourner egalite</Titre>
+          <DetailsVisible>0</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants/>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+</Algorithme>

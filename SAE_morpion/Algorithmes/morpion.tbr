@@ -1,0 +1,378 @@
+<?xml version="1.1"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Algorithme</nom>
+  <date_creation>8/1/2022 14:26</date_creation>
+  <Elements>
+    <Procedure>
+      <Position>2292;355</Position>
+      <StyleLien>1</StyleLien>
+      <PreAssertion>tab&#xd;
+taille</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>afficherTableau(tab)</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>0</DetailsVideVisible>
+      <Enfants/>
+    </Procedure>
+    <Procedure>
+      <Position>2572;355</Position>
+      <StyleLien>1</StyleLien>
+      <PreAssertion>coordonnees
+joueurActif</PreAssertion>
+      <PostAssertion>coordonnees
+partie</PostAssertion>
+      <Titre>saisirCoordonnees(coordonnees, joueurActif, partie)</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants/>
+    </Procedure>
+    <Action>
+      <Position>1355;18</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>?</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>morpion</Titre>
+      <DetailsVisible>0</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>455;185</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>?</PreAssertion>
+          <PostAssertion>nbTour, tab
+joueurUn
+joueurDeux</PostAssertion>
+          <Titre>initialiser la partie</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
+          <Enfants>
+            <Action>
+              <Position>66;285</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>nbTour
+partie</PostAssertion>
+              <Titre>initialiser les variables</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>38;388</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>nbTour ← 0</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>203;385</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>partie ← normal</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+            <Action>
+              <Position>363;284</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>taille</PreAssertion>
+              <PostAssertion>tab</PostAssertion>
+              <Titre>préparer le tableau de jeu</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants>
+                <Iteration>
+                  <Position>520.5;362.5</Position>
+                  <StyleLien>1</StyleLien>
+                  <Titre>pour ligne de 0 à taille - 1</Titre>
+                  <IterationFixe>1</IterationFixe>
+                  <Enfants>
+                    <Iteration>
+                      <Position>520.5;441.5</Position>
+                      <StyleLien>1</StyleLien>
+                      <Titre>pour colonne de 0 à taille - 1</Titre>
+                      <IterationFixe>1</IterationFixe>
+                      <Enfants>
+                        <Action>
+                          <Position>345;516</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>ligne
+colonne</PreAssertion>
+                          <PostAssertion>tab</PostAssertion>
+                          <Titre>tab[ligne][colonne] ← ' '</Titre>
+                          <DetailsVisible>1</DetailsVisible>
+                          <DetailsVideVisible>1</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </Iteration>
+                  </Enfants>
+                </Iteration>
+              </Enfants>
+            </Action>
+            <Procedure>
+              <Position>726;286</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>joueurUn&#xd;
+joueurDeux</PostAssertion>
+              <Titre>initialiserLaPartie(joueurUn, joueurDeux)</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants/>
+            </Procedure>
+          </Enfants>
+        </Action>
+        <Action>
+          <Position>2103;145</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>tab, nbTour
+joueurUn, joueurDeux
+partie</PreAssertion>
+          <PostAssertion>tab&#xd;
+victoireJoueur</PostAssertion>
+          <Titre>dérouler la partie</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Iteration>
+              <Position>2339.5;224.5</Position>
+              <StyleLien>1</StyleLien>
+              <Titre>?</Titre>
+              <IterationFixe>0</IterationFixe>
+              <Enfants>
+                <Condition>
+                  <Position>1067.5;353</Position>
+                  <StyleLien>1</StyleLien>
+                  <estUnique>1</estUnique>
+                  <operationsLogiques>
+                    <operation>
+                      <Titre>partie ≠ normal</Titre>
+                      <Enfants>
+                        <Sortie>
+                          <Position>1108;428</Position>
+                        </Sortie>
+                      </Enfants>
+                    </operation>
+                    <operation>
+                      <Titre>?</Titre>
+                      <Enfants/>
+                    </operation>
+                  </operationsLogiques>
+                </Condition>
+                <Action>
+                  <Position>1243;348</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>nbTour ← nbTour + 1</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+                <Action>
+                  <Position>1443;350</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>nb Tour&#xd;
+joueurUn&#xd;
+joueurDeux</PreAssertion>
+                  <PostAssertion>joueurActif</PostAssertion>
+                  <Titre>déterminer quel joueur joue</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants>
+                    <Procedure>
+                      <Position>1432;438</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>joueurUn&#xd;
+joueurDeux&#xd;
+nbTour</PreAssertion>
+                      <PostAssertion>joueurActif</PostAssertion>
+                      <Titre>definirJoueurActif(joueurUn,joueurDeux,nbTour</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants/>
+                    </Procedure>
+                  </Enfants>
+                </Action>
+                <Action>
+                  <Position>3112;356</Position>
+                  <StyleLien>2</StyleLien>
+                  <PreAssertion>tab, partie
+coordonnees
+joueurActif</PreAssertion>
+                  <PostAssertion>tab
+partie</PostAssertion>
+                  <Titre>modifier le tableau et verifier la victoire</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants>
+                    <Condition>
+                      <Position>3271.5;441</Position>
+                      <StyleLien>1</StyleLien>
+                      <estUnique>0</estUnique>
+                      <operationsLogiques>
+                        <operation>
+                          <Titre>partie ≠ abandon</Titre>
+                          <Enfants>
+                            <Condition>
+                              <Position>3013.5;539</Position>
+                              <StyleLien>1</StyleLien>
+                              <estUnique>1</estUnique>
+                              <operationsLogiques>
+                                <operation>
+                                  <Titre>tab[coordonnees.ligne][coordonnees.colone] = ' '</Titre>
+                                  <Enfants>
+                                    <Action>
+                                      <Position>3000;630</Position>
+                                      <StyleLien>1</StyleLien>
+                                      <PreAssertion>?</PreAssertion>
+                                      <PostAssertion>?</PostAssertion>
+                                      <Titre>tab[coordonnees.ligne][coordonnees.colone] ← ' '</Titre>
+                                      <DetailsVisible>0</DetailsVisible>
+                                      <DetailsVideVisible>1</DetailsVideVisible>
+                                      <Enfants/>
+                                    </Action>
+                                  </Enfants>
+                                </operation>
+                                <operation>
+                                  <Titre>Sinon</Titre>
+                                  <Enfants/>
+                                </operation>
+                              </operationsLogiques>
+                            </Condition>
+                            <Condition>
+                              <Position>3425.5;540</Position>
+                              <StyleLien>0</StyleLien>
+                              <estUnique>0</estUnique>
+                              <operationsLogiques>
+                                <operation>
+                                  <Titre>verifVictoireJoueur(tab,joueurActif)</Titre>
+                                  <Enfants>
+                                    <Action>
+                                      <Position>3399;627</Position>
+                                      <StyleLien>1</StyleLien>
+                                      <PreAssertion>?</PreAssertion>
+                                      <PostAssertion>?</PostAssertion>
+                                      <Titre>partie ← victoireJoueurActif</Titre>
+                                      <DetailsVisible>0</DetailsVisible>
+                                      <DetailsVideVisible>1</DetailsVideVisible>
+                                      <Enfants/>
+                                    </Action>
+                                  </Enfants>
+                                </operation>
+                                <operation>
+                                  <Titre>verifEgalite(tab)</Titre>
+                                  <Enfants>
+                                    <Action>
+                                      <Position>3615;628</Position>
+                                      <StyleLien>1</StyleLien>
+                                      <PreAssertion>?</PreAssertion>
+                                      <PostAssertion>?</PostAssertion>
+                                      <Titre>partie ← egalite</Titre>
+                                      <DetailsVisible>0</DetailsVisible>
+                                      <DetailsVideVisible>1</DetailsVideVisible>
+                                      <Enfants/>
+                                    </Action>
+                                  </Enfants>
+                                </operation>
+                              </operationsLogiques>
+                            </Condition>
+                          </Enfants>
+                        </operation>
+                      </operationsLogiques>
+                    </Condition>
+                  </Enfants>
+                </Action>
+                <Procedure>
+                  <Position>1962;354</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>effacer</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Procedure>
+                <Action>
+                  <Position>2058;355</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>nbTour</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>afficher nbTour</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Iteration>
+          </Enfants>
+        </Action>
+        <Action>
+          <Position>3846;142</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>joueurUn
+joueurDeux
+joueurGagnant
+nbTour, tab</PreAssertion>
+          <PostAssertion>?</PostAssertion>
+          <Titre>finaliser la partie</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
+          <Enfants>
+            <Procedure>
+              <Position>4238;281</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>joueurUn&#xd;
+joueurDeux&#xd;
+joueurGagnant&#xd;
+nbTour</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>afficherFinDePartie</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants/>
+            </Procedure>
+            <Action>
+              <Position>3734;279</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>nbTour</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>afficher nbTour</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Procedure>
+              <Position>3973;280</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>tab</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>afficherTableau(tab)</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants/>
+            </Procedure>
+            <Procedure>
+              <Position>3617;282</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>effacer()</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Procedure>
+          </Enfants>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+</Algorithme>

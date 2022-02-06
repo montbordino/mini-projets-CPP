@@ -1,0 +1,223 @@
+<?xml version="1.1"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Algorithme</nom>
+  <date_creation>7/1/2022 15:27</date_creation>
+  <Elements>
+    <Action>
+      <Position>318;107</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>joueurUn, joueurDeux
+dernierJoueur</PreAssertion>
+      <PostAssertion>?</PostAssertion>
+      <Titre>afficherFinPartie</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>0</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>494;202</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>conditionArret
+gagnant</PreAssertion>
+          <PostAssertion>?</PostAssertion>
+          <Titre>afficher un message en fonction de la condition d'arret</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>0</DetailsVideVisible>
+          <Enfants>
+            <Condition>
+              <Position>537.5;309</Position>
+              <StyleLien>0</StyleLien>
+              <estUnique>0</estUnique>
+              <operationsLogiques>
+                <operation>
+                  <Titre>conditionArret = abandon</Titre>
+                  <Enfants>
+                    <Action>
+                      <Position>416;436</Position>
+                      <StyleLien>2</StyleLien>
+                      <PreAssertion>joueurUn
+joueurDeux
+nbTour
+gagnant</PreAssertion>
+                      <PostAssertion>?</PostAssertion>
+                      <Titre>afficher la fin de partie (sénario d'abandon)</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <Enfants>
+                        <Action>
+                          <Position>572;609</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>perdant</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>afficher "dernierJoueur"</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                        <Action>
+                          <Position>760;610</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>nbTour</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>afficher nbTour</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                        <Action>
+                          <Position>439;608</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>gagnant</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>afficher gagnant</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </Action>
+                    <Action>
+                      <Position>22;435</Position>
+                      <StyleLien>2</StyleLien>
+                      <PreAssertion>dernierJoueur
+joueurUn
+joueurDeux</PreAssertion>
+                      <PostAssertion>gagnant</PostAssertion>
+                      <Titre>definir gagnant</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants>
+                        <Condition>
+                          <Position>96.5;526</Position>
+                          <StyleLien>0</StyleLien>
+                          <estUnique>0</estUnique>
+                          <operationsLogiques>
+                            <operation>
+                              <Titre>dernierJoueur.nom = joueurDeux.nom</Titre>
+                              <Enfants>
+                                <Action>
+                                  <Position>15;607</Position>
+                                  <StyleLien>1</StyleLien>
+                                  <PreAssertion>?</PreAssertion>
+                                  <PostAssertion>?</PostAssertion>
+                                  <Titre>gagnant ← joueurUn.nom</Titre>
+                                  <DetailsVisible>0</DetailsVisible>
+                                  <DetailsVideVisible>1</DetailsVideVisible>
+                                  <Enfants/>
+                                </Action>
+                              </Enfants>
+                            </operation>
+                            <operation>
+                              <Titre>Sinon</Titre>
+                              <Enfants>
+                                <Action>
+                                  <Position>216;608</Position>
+                                  <StyleLien>1</StyleLien>
+                                  <PreAssertion>?</PreAssertion>
+                                  <PostAssertion>?</PostAssertion>
+                                  <Titre>gagnant ← joueurDeux.nom</Titre>
+                                  <DetailsVisible>0</DetailsVisible>
+                                  <DetailsVideVisible>1</DetailsVideVisible>
+                                  <Enfants/>
+                                </Action>
+                              </Enfants>
+                            </operation>
+                          </operationsLogiques>
+                        </Condition>
+                      </Enfants>
+                    </Action>
+                  </Enfants>
+                </operation>
+                <operation>
+                  <Titre>conditionArret = egalite</Titre>
+                  <Enfants>
+                    <Action>
+                      <Position>758;435</Position>
+                      <StyleLien>1</StyleLien>
+                      <PreAssertion>?</PreAssertion>
+                      <PostAssertion>?</PostAssertion>
+                      <Titre>afficher "Egalite car grille complete"</Titre>
+                      <DetailsVisible>0</DetailsVisible>
+                      <DetailsVideVisible>1</DetailsVideVisible>
+                      <Enfants/>
+                    </Action>
+                  </Enfants>
+                </operation>
+                <operation>
+                  <Titre>Sinon</Titre>
+                  <Enfants>
+                    <Action>
+                      <Position>987;437</Position>
+                      <StyleLien>2</StyleLien>
+                      <PreAssertion>gagnant&#xd;
+nbTour</PreAssertion>
+                      <PostAssertion>?</PostAssertion>
+                      <Titre>afficher la fin de partie&#xd;
+(sénario classique)</Titre>
+                      <DetailsVisible>1</DetailsVisible>
+                      <DetailsVideVisible>0</DetailsVideVisible>
+                      <Enfants>
+                        <Action>
+                          <Position>982;533</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>gagnant</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>Afficher gagnant</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                        <Action>
+                          <Position>1123;533</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>nbTour</PreAssertion>
+                          <PostAssertion>?</PostAssertion>
+                          <Titre>Afficher nb Tour</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </Action>
+                  </Enfants>
+                </operation>
+              </operationsLogiques>
+            </Condition>
+          </Enfants>
+        </Action>
+        <Action>
+          <Position>245;202</Position>
+          <StyleLien>2</StyleLien>
+          <PreAssertion>?</PreAssertion>
+          <PostAssertion>?</PostAssertion>
+          <Titre>signaler la fin de partie</Titre>
+          <DetailsVisible>0</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants>
+            <Action>
+              <Position>227;285</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>?</PostAssertion>
+              <Titre>afficher " --- Fin De La Partie ---"</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+          </Enfants>
+        </Action>
+      </Enfants>
+    </Action>
+    <Action>
+      <Position>20;113</Position>
+      <StyleLien>1</StyleLien>
+      <PreAssertion>?</PreAssertion>
+      <PostAssertion>nbTour
+conditionArret</PostAssertion>
+      <Titre>?</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants/>
+    </Action>
+  </Elements>
+</Algorithme>

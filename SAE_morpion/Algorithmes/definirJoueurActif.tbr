@@ -1,0 +1,58 @@
+<?xml version="1.1"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>definirJoueurActif</nom>
+  <date_creation>31/12/2021 13:54</date_creation>
+  <Elements>
+    <Action>
+      <Position>706;252</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>joueurUn&#xd;
+joueurDeux&#xd;
+nombreDeTour</PreAssertion>
+      <PostAssertion>joueurQuiJoue</PostAssertion>
+      <Titre>definir joueur actif</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Condition>
+          <Position>803.5;341</Position>
+          <StyleLien>0</StyleLien>
+          <estUnique>0</estUnique>
+          <operationsLogiques>
+            <operation>
+              <Titre>(nombreDeTour % 2) = 0</Titre>
+              <Enfants>
+                <Action>
+                  <Position>784;421</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>retourner JoueurDeux</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </operation>
+            <operation>
+              <Titre>Sinon</Titre>
+              <Enfants>
+                <Action>
+                  <Position>976;421</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>retourner joueurUn</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </operation>
+          </operationsLogiques>
+        </Condition>
+      </Enfants>
+    </Action>
+  </Elements>
+</Algorithme>

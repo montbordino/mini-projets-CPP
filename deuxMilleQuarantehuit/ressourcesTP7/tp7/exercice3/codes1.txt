@@ -1,0 +1,12 @@
+a   e
+A  e
+e   i
+E i
+i   o
+I  o
+o  u
+O    u
+u y
+U  y
+y a
+Y   a
